@@ -1,53 +1,93 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: 小鱼儿杂想 # ex. I m Chuan
+name: 小鱼儿杂想 # ex. DONGChuan
+email: yujingzhou2010@163.com
+location: 中国·北京 # ex. Nice, France
+company: 
+company_url: my_company_website
+github_url: https://github.com/yujingzhou # ex. https://github.com/DONGChuan
+github_username: yujingzhou # ex. DONGChuan
+description: 和小鱼儿一起，探索财富与精神自由之路；涵盖生活，学习，工作的各种杂想
+favicon: favicon.png # Image must be in assets/images
+repository: yujingzhou/yujingzhou.github.io # ex. DONGChuan/DONGChuan.github.io
+
+# The base hostname & protocol for your site
+# For local test, please use http://localhost:4000
+# For production, use your github page url. ex. http://dongchuan.github.io
+url: http://localhost:4000
+
+## Gem
+gems:
+  - jekyll-paginate
+  - jekyll-geo-pattern
+  - rouge
+  - kramdown
+  - jekyll-github-metadata
+
 # Build settings
-permalink   : /blog/:year/:title/
-markdown    : kramdown
-highlighter : pygments
+markdown: kramdown
+highlighter: rouge
+lsi:         false
+excerpt_separator: "\n\n"
 
-paginate: 3
-paginate_path: "/blog/page/:num/"
-comments: true
+source:      .
+destination: ./_site
 
-source: source
-destination: _site
-sass:
-  sass_dir: _scss
-  style: compressed # expanded
+quiet:    false
+defaults: []
 
-# SEO settings
-title: end2end
-description: "A free Jekyll theme for download"
-keywords: "Jekyll, theme, free, download, SEO, blog, web"
-url: http://nandomoreira.me
-baseurl: "/end2end"
-# baseurl: ""
+kramdown:
+  input: GFM
+  enable_coderay: true
 
-# google_analytics: UA-52446115-1
-repo: http://github.com/nandomoreirame/end2end
-disqus_shortname: "fernandomoreira"
-disqus_site_shortname: "fernandomoreira"
+# Disque
+disque: my_disque_settings # ex. httpdongchuangithubio.disqus.com
 
-# Author settings
-author:
-  name      : Fernando Moreira
-  job       : Frontend Engineer
-  bio       : "Enthusiast performance, responsive design and usability, always looking for the best project and good coffee."
-  thumb     : /images/author.jpg
-  email     : nandomoreira.me@gmail.com
-  url       : http://nandomoreira.me
-  github    : http://github.com/nandomoreirame
-  twitter   : http://twitter.com/nandomoreirame
-  facebook  : http://facebook.com/fernando.dev
-  linkedin  : http://linkedin.com/in/nandomoreirame
+# Pagination
+paginate: 10
+paginate_path: 'page:num'
 
-# navbar pages
-navbar:
-  - slug: about
-    title: About
-  # - slug: resume
-  #   title: Resume
-  # - slug: skills
-  #   title: Skills
-  - slug: blog
-    title: Blog
+# Navigation. If you do not like these modules, just remove them :D
+navs:
+  -
+    href: /
+    label: Home
 
-exclude: ["gulp", "node_modules", "bower", "bower_components", "config.rb", "src", "Gemfile", "Gemfile.lock", ".rvmrc", ".rbenv-version", "package.json", "gulpfile.js", "README.md", "Rakefile", "changelog.md"]
+  -
+    href: /open-source
+    label: Open-Source
+
+  -
+    href: /blog
+    label: Blog
+
+  -
+    href: /bookmark
+    label: Bookmark
+
+  -
+    href: /about
+    label: About
+
+# Sidebar to show popular repo
+side_bar_repo_limit: 5 # Number of repos to show
+
+# Google Analytics
+analytics :
+  provider : google
+  google :
+      tracking_id : 'UA-135365528-1'  # ex. UA-72165600-X
+
+
+# For about.html. Fell free to create your own!
+skill_software_keywords: [Java, C, C++, Qt, Python, MySQL, Oracle, SQLite, PL/SQL, Design Patterns]
+skill_j2ee_keywords: [Spring, Struct, Hibernet, MyBatis, JPA]
+skill_web_keywords: [HTML, CSS, JS, JQuery, Ajax, AngularJS, NodeJS, ExpressJS, MongoDB, Redis, PHP, Symfony, Boostrap]
+skill_mobile_app_keywords: [Android, Sketch UI Desgin]
