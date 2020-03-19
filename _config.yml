@@ -10,7 +10,7 @@ title: 小鱼儿杂想 # ex. I m Chuan
 name: 小鱼儿杂想 # ex. DONGChuan
 email: yujingzhou2010@163.com
 location: 中国·北京 # ex. Nice, France
-company: 
+company:
 company_url: my_company_website
 github_url: https://github.com/yujingzhou # ex. https://github.com/DONGChuan
 github_username: yujingzhou # ex. DONGChuan
@@ -58,23 +58,23 @@ paginate_path: 'page:num'
 navs:
   -
     href: /
-    label: Home
+    label: 首页
 
   -
     href: /open-source
-    label: Open-Source
+    label: GitHub
 
   -
     href: /blog
-    label: Blog
+    label: 日志
 
   -
     href: /bookmark
-    label: Bookmark
+    label: 书签
 
   -
     href: /about
-    label: About
+    label: 关于
 
 # Sidebar to show popular repo
 side_bar_repo_limit: 5 # Number of repos to show
