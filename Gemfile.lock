@@ -166,7 +166,7 @@ GEM
     thread_safe (0.3.6)
     toml (0.1.2)
       parslet (~> 1.5.0)
-    tzinfo (1.2.5)
+    tzinfo (1.2.10)
       thread_safe (~> 0.1)
     yajl-ruby (1.1.0)
 
